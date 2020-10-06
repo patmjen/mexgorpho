@@ -106,6 +106,11 @@ inline bool isVector(const mxArray *a)
     return mxGetNumberOfDimensions(a) == 2 && (mxGetN(a) == 1 || mxGetM(a) == 1);
 }
 
+inline bool isMatrix(const mxArray *a)
+{
+    return mxGetNumberOfDimensions(a) == 2;
+}
+
 inline bool isVolume(const mxArray *a)
 {
     return mxGetNumberOfDimensions(a) <= 3;
@@ -116,6 +121,11 @@ inline bool isRealVector(const mxArray *a)
 	return isVector(a) && isRealNumeric(a);
 }
 
+inline bool isRealMatrix(const mxArray *a)
+{
+    return isMatrix(a) && isRealNumeric(a);
+}
+
 inline bool isRealVolume(const mxArray *a)
 {
     return isVolume(a) && isRealNumeric(a);
@@ -124,6 +134,11 @@ inline bool isRealVolume(const mxArray *a)
 inline void ensureRealVector(const mxArray *a, const char *errPrefix = "value")
 {
     ensureOrError(isRealVector(a), "%d must a real numeric vector", errPrefix);
+}
+
+inline void ensureRealMatrix(const mxArray *a, const char *errPrefix = "value")
+{
+    ensureOrError(isRealMatrix(a), "%s must a real numeric matrix", errPrefix);
 }
 
 inline void ensureRealNumericVolume(const mxArray *a, const char *errPrefix = "value")
