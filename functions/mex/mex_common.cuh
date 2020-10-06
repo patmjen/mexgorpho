@@ -181,10 +181,16 @@ inline int3 getValidatedInt3(const mxArray *a, const char *errPrefix = "value")
     return out;
 }
 
+template <class Ty>
+inline Ty getValidatedScalar(const mxArray *a, const char *errPrefix = "value")
+{
+    ensureOrError(mxIsScalar(a) && isRealNumeric(a), "%s must be a real numeric scalar", errPrefix);
+    return static_cast<Ty>(mxGetScalar(a));
+}
+
 inline int getValidatedMorphOp(const mxArray *a)
 {
-    ensureOrError(mxIsScalar(a) && isRealNumeric(a), "op must be a real numeric scalar");
-    int op = static_cast<int>(mxGetScalar(a));
+    int op = getValidatedScalar<int>(a, "op");
     ensureValue<int>(op, { MOP_DILATE, MOP_ERODE, MOP_OPEN, MOP_CLOSE, MOP_TOPHAT, MOP_BOTHAT }, "op");
     return op;
 }
