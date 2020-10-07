@@ -60,9 +60,7 @@ parse(parser,vol,strel,op,varargin{:});
 opts = parser.Results;
 
 % Ensure strel is logical
-if ~islogical(strel)
-    strel = cast(strel, 'logical');
-end
+strel = castIfNot(strel, 'logical');
 
 % Ensure blocks are not bigger than volume
 opts.BlockSize = min(opts.BlockSize, size(vol));

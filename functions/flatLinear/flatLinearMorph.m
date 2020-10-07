@@ -70,12 +70,8 @@ end
 opts.BlockSize = min(opts.BlockSize, size(vol));
 
 % Ensure lineSteps and lineLens are class int32
-if ~isa(lineSteps, 'int32')
-    lineSteps = cast(lineSteps, 'int32');
-end
-if ~isa(lineLens, 'int32')
-    lineLens = cast(lineLens, 'int32');
-end
+lineSteps = castIfNot(lineSteps, 'int32');
+lineLens = castIfNot(lineLens, 'int32');
 
 if islogical(vol)
     % If vol is logical we first cast it to uint8 and then recast res back
