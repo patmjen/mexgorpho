@@ -21,6 +21,10 @@ function res = flatOpen(vol, strel, varargin)
 % res : numeric 3d array
 %     Result of opening.
 %
+% See also
+% --------
+% flatDilate flatErode flatClose flatTophat flatBothat flatMorph
+%
 % Example
 % -------
 %     % Simple opening with an 11 x 11 x 11 box structuring element

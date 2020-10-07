@@ -23,6 +23,11 @@ function res = flatLinearDilate(vol, lineSteps, lineLens, varargin)
 % res : numeric 3d array
 %     Result of dilation.
 %
+% See also
+% --------
+% flatLinearErode flatLinearMorph
+% flatBallApprox
+%
 % Example
 % -------
 %     % Simple dilation with an 11 x 15 x 21 box structuring element

@@ -21,6 +21,10 @@ function res = flatErode(vol, strel, varargin)
 % res : numeric 3d array
 %     Result of erosion.
 %
+% See also
+% --------
+% flatDilate flatOpen flatClose flatTophat flatBothat flatMorph
+%
 % Example
 % -------
 %     % Simple erosion with an 11 x 11 x 11 box structuring element

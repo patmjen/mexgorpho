@@ -27,6 +27,11 @@ function res = flatLinearMorph(vol, lineSteps, lineLens, op, varargin)
 % res : numeric 3d array
 %     Result of morphological operation.
 %
+% See also
+% --------
+% flatLinearDilate flatLinearErode
+% flatBallApprox
+%
 % Example
 % -------
 %     % Simple dilation with an 11 x 15 x 21 box structuring element

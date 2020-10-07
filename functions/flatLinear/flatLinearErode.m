@@ -23,6 +23,11 @@ function res = flatLinearErode(vol, lineSteps, lineLens, varargin)
 % res : numeric 3d array
 %     Result of erosion.
 %
+% See also
+% --------
+% flatLinearDilate flatLinearMorph
+% flatBallApprox
+%
 % Example
 % -------
 %     % Simple erosion with an 11 x 15 x 21 box structuring element

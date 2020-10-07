@@ -25,6 +25,10 @@ function res = genMorph(vol, strel, op, varargin)
 % res : numeric 3d array
 %     Result of morphological operation.
 %
+% See also
+% --------
+% genDilate genErode
+%
 % Example
 % -------
 %     % Simple dilation with an 11 x 11 x 11 box structuring element

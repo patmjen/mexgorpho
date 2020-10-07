@@ -21,6 +21,10 @@ function res = flatDilate(vol, strel, varargin)
 % res : numeric 3d array
 %     Result of dilation.
 %
+% See also
+% --------
+% flatErode flatOpen flatClose flatTophat flatBothat flatMorph
+%
 % Example
 % -------
 %     % Simple dilation with an 11 x 11 x 11 box structuring element

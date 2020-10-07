@@ -21,6 +21,10 @@ function res = genDilate(vol, strel, varargin)
 % res : numeric 3d array
 %     Result of dilation.
 %
+% See also
+% --------
+% genErode genMorph
+%
 % Example
 % -------
 %     % Simple dilation with an 11 x 11 x 11 box structuring element

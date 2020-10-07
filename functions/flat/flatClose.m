@@ -21,6 +21,10 @@ function res = flatClose(vol, strel, varargin)
 % res : numeric 3d array
 %     Result of Closeing.
 %
+% See also
+% --------
+% flatDilate flatErode flatOpen flatTophat flatBothat flatMorph
+%
 % Example
 % -------
 %     % Simple closing with an 11 x 11 x 11 box structuring element

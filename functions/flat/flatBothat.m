@@ -21,6 +21,10 @@ function res = flatBothat(vol, strel, varargin)
 % res : numeric 3d array
 %     Result of bothat.
 %
+% See also
+% --------
+% flatDilate flatErode flatOpen flatClose flatTophat flatMorph
+%
 % Example
 % -------
 %     % Simple bothat with an 11 x 11 x 11 box structuring element

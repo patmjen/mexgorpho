@@ -29,6 +29,10 @@ function res = flatMorph(vol, strel, op, varargin)
 % res : numeric 3d array
 %     Result of morphological operation.
 %
+% See also
+% --------
+% flatDilate flatErode flatOpen flatClose flatTophat flatBothat
+%
 % Example
 % -------
 %     % Simple dilation with an 11 x 11 x 11 box structuring element

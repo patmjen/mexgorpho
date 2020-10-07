@@ -21,6 +21,10 @@ function res = flatTophat(vol, strel, varargin)
 % res : numeric 3d array
 %     Result of tophat.
 %
+% See also
+% --------
+% flatDilate flatErode flatOpen flatClose flatBothat flatMorph
+%
 % Example
 % -------
 %     % Simple tophat with an 11 x 11 x 11 box structuring element
