@@ -40,6 +40,7 @@ function res = genMorph(vol, strel, op, varargin)
 % Patrick M. Jensen, 2020, Technical University of Denmark
 
 % Parse inputs
+ensureGpuAvail();
 narginchk(3, inf);
 parser = inputParser;
 % Required
