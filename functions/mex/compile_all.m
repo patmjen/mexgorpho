@@ -1,9 +1,10 @@
 gorphoPath = '../../gorpho/lib';
 
 compileOptions = {
-    ['-I' gorphoPath]
-    ['-I' gorphoPath '/cudablockproc']
-    'NVCC_FLAGS="--expt-relaxed-constexpr"'
+    ['-I' gorphoPath],...
+    ['-I' gorphoPath '/cudablockproc'],...
+    'NVCC_FLAGS="--expt-relaxed-constexpr"',...
+    '-f', 'nvcc_g++_c++14.xml'
 };
 
 mexFiles = dir('gorpho_mex_*.cu');
@@ -14,3 +15,4 @@ for i = 1:numMexFiles
     fprintf('Compiling %s...\n', mexFiles(i).name);
     mexcuda(compileOptions{:}, crntFile);
 end
+fprintf('Done\n');
