@@ -1,6 +1,6 @@
 # mexgorpho
 
-MATLAB bindings for [gorpho](github.com/patmjen/gorpho).
+MATLAB bindings for [gorpho](https://github.com/patmjen/gorpho).
 
 This is a MATLAB library for fast 3D mathematical morphology using CUDA. Currently, the library provides:
 
