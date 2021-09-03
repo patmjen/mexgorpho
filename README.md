@@ -9,6 +9,8 @@ This is a MATLAB library for fast 3D mathematical morphology using CUDA. Current
  * A van Herk/Gil-Werman implementation for fast dilation/erosion with flat line segments in 3D.
  * Automatic block processing for 3D images which can't fit in GPU memory.
 
+**Python bindings** are also available at [github.com/patmjen/pygorpho](https://github.com/patmjen/pygorpho).
+
  ## Installation
 
  1. Download source code (including submodule).
